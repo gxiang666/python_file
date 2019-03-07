@@ -1,0 +1,14 @@
+body {
+	background: url("./photo.jpg") repeat-y center;
+	height: auto;
+	margin: 10px;
+}
+
+p {
+	font-size: 40px;
+}
+
+header nav {
+	font-size: 100px;
+	color :red;
+}
