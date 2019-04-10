@@ -1,0 +1,9 @@
+﻿Django安装与配置
+	1) pip3 install django==2.0.2           安装django
+	2) cd desktop                           进入桌面文件夹
+	3) django-admin startproject wordcount  创建新项目wordcount
+	4) cd wordcount                         进入wordcount项目文件夹
+	5) python manage.py runserver           运行manage.py,启动web服务器
+	                                        Ctrl+Break可以关闭服务器
+	6) 在浏览器打开http://127.0.0.1:8000/  这是我们的网站主页
+	7) 设置cmd快捷方式起始位置C:\Users\用户名\Desktop\wordcount
