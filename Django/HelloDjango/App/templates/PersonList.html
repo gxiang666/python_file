@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PersonList</title>
+</head>
+<body>
+    <h1>这是人员列表</h1>
+
+    {% for person in person_data %}
+        <li>{{ person.p_name }}</li>
+    {% endfor %}
+
+
+</body>
+</html>

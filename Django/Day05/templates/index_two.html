@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+
+{% block extJS %}
+    {{ block.super }}
+    <style>
+
+        div{
+            background: gold;
+        }
+    </style>
+
+{% endblock %}
+
+
+{% block header %}
+    {{ block.super }}
+
+    <h3>今天是个好天气，可惜看不到太阳</h3>
+
+{% endblock %}
+
+
+{% block news %}
+
+    <div>
+        <h2>今天发生了一件大事，天出了一个窟窿</h2>
+    </div>
+
+{% endblock %}
+
+{% block docs %}
+
+
+    <div>
+
+        <h3>细思极恐</h3>
+        <li>你的闺蜜在减肥</li>
+        <li>你的对手在磨刀</li>
+        <li>隔壁老王在练腰</li>
+
+
+    </div>
+
+{% endblock %}

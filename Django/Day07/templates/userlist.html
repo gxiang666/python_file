@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+
+<h3>用户列表</h3>
+
+<ol>
+    {% for user in users %}
+        <li>{{ user.u_name }}</li>
+    {% endfor %}
+
+</ol>
+
+
+<nav aria-label="Page navigation">
+    <ul class="pagination">
+        <li>
+            {% if page.has_previous %}
+                <a href="{% url 'app:get_users' page.previous_page_number %}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            {% else %}
+                <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            {% endif %}
+
+        </li>
+        {#        <li><a href="#">1</a></li>#}
+        {#        <li><a href="#">2</a></li>#}
+        {#        <li><a href="#">3</a></li>#}
+        {#        <li><a href="#">4</a></li>#}
+        {#        <li><a href="#">5</a></li>#}
+
+        {% for page_num in page_range %}
+            {% ifequal page.number page_num %}
+                <li class="active">
+                    <a href="{% url 'app:get_users' page_num %}">{{ page_num }}</a>
+                </li>
+            {% else %}
+                <li>
+                    <a href="{% url 'app:get_users' page_num %}">{{ page_num }}</a>
+                </li>
+            {% endifequal %}
+        {% endfor %}
+
+
+        <li>
+            {% if page.has_next %}
+                <a href="{% url 'app:get_users' page.next_page_number %}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            {% else %}
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            {% endif %}
+
+        </li>
+    </ul>
+</nav>
+
+</body>
+</html>

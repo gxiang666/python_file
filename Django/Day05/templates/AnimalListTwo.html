@@ -1,0 +1,106 @@
+<ul>
+
+    {% for animal in animals %}
+        <li>
+            {{ forloop.counter0 }}:
+            {{ animal.a_name }}:
+            {{ forloop.revcounter }}
+        </li>
+    {% endfor %}
+
+
+</ul>
+
+<hr>
+<ul>
+
+    {% for animal in animals %}
+        {% comment %}
+        {% if forloop.first %}
+            <li style="color: #11ff4c">{{ animal.a_name }}</li>
+            {% elif forloop.last %}
+            <li style="color: #ff0000">{{ animal.a_name }}</li>
+            {% else %}
+            <li>{{ animal.a_name }}</li>
+        {% endif %}
+        {% endcomment %}
+    {% endfor %}
+
+
+</ul>
+
+<hr>
+
+<!--
+    老板让我把程序写的卡一些，等客户交钱优化
+    time.sleep(2)
+-->
+{#  老板是个坑，不发我奖金，也不给加班费#}
+
+<hr>
+
+<h3>{% widthratio score 10 100 %}</h3>
+
+<hr>
+
+<ul>
+
+    {% for animal in animals %}
+
+        {% if forloop.counter|divisibleby:2 %}
+            <li style="color: aqua">{{ animal.a_name|lower }}</li>
+        {% else %}
+            <li style="color: gold">{{ animal.a_name|upper }}</li>
+        {% endif %}
+
+    {% endfor %}
+
+
+</ul>
+
+<hr>
+
+{% ifequal value1 value2 %}
+
+    <h2>技术是第一生产力</h2>
+
+{% else %}
+
+    <h2>想多活几年，就躺着等着吧</h2>
+
+{% endifequal %}
+
+<hr>
+
+{% ifnotequal value1 value2 %}
+
+    <h3>今天是个好天气</h3>
+
+{% else %}
+
+    <h4>一开大会就下霾</h4>
+
+{% endifnotequal %}
+
+<hr>
+
+<h2>{{ value1|add:20 }}</h2>
+<hr>
+<h2>{{ value1|add:-20 }}</h2>
+
+<hr>
+<h2>{{ animals|join:'=' }}</h2>
+<hr>
+
+<h3>{{ content }}</h3>
+
+<hr>
+
+{% autoescape on %}
+
+    {{ content }}
+
+{% endautoescape %}
+
+
+

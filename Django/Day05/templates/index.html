@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block extJS %}
+
+    <script type="text/javascript">
+
+        $(function () {
+            var swiper = Swiper(".swiper-container",{
+
+            });
+        })
+
+    </script>
+
+    <style type="text/css">
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+{% endblock %}
+
+{% block header %}
+
+    <button class="btn btn-default btn-block btn-danger">这是按钮</button>
+
+{% endblock %}
+
+{% block banner %}
+
+    <div style="width: 100%;height: 300px;background: #11ff4c">
+
+
+        <div class="swiper-container" style="height: 100%">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522392339280&di=935a2a9ddcbfcea09b8eb55fd903f326&imgtype=0&src=http%3A%2F%2Fpic47.nipic.com%2F20140827%2F17520916_165423456000_2.jpg"
+                         alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522392386862&di=393f48592ff9022a099ef721a7184601&imgtype=0&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201609%2F14%2F211633d84o8m8mvzvlvrrr.jpg"
+                         alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522987136&di=49dc131a466f172d8c84f9b0e9967066&imgtype=jpg&er=1&src=http%3A%2F%2Fpic33.photophoto.cn%2F20141029%2F0005018400189939_b.jpg"
+                         alt="">
+                </div>
+            </div>
+{#            <!-- 如果需要分页器 -->#}
+{#            <div class="swiper-pagination"></div>#}
+{##}
+{#            <!-- 如果需要导航按钮 -->#}
+{#            <div class="swiper-button-prev"></div>#}
+{#            <div class="swiper-button-next"></div>#}
+{##}
+{#            <!-- 如果需要滚动条 -->#}
+{#            <div class="swiper-scrollbar"></div>#}
+        </div>
+
+
+    </div>
+
+{% endblock %}
+
+{% block body %}
+
+
+    {% block news %}
+
+    {% endblock %}
+
+    {% block docs %}
+
+    {% endblock %}
+
+
+{% endblock %}

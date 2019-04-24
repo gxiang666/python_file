@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抢商品优惠券</title>
+</head>
+<body>
+
+<form action="{% url 'app:get_goods' %}" method="post">
+
+    {% csrf_token %}
+
+    <input type="text" name="username" placeholder="请输入抢购用户名">
+
+    <br>
+
+    <input type="submit" value="抢购">
+
+</form>
+
+
+</body>
+</html>

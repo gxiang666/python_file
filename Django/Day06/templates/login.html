@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+<form action="{% url 'app:do_login' %}" method="post">
+
+    {% csrf_token %}
+
+    <input type="text" name="username" placeholder="请输入你对象的名字">
+    <br>
+
+    <input type="submit">
+
+
+</form>
+
+</body>
+</html>

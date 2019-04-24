@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            $("#verify_code").click(function () {
+                {#alert("我要换验证码");#}
+                console.log(Math.random());
+                $(this).attr('src','/app/getverifycode'+Math.random());
+            })
+        })
+
+    </script>
+</head>
+<body>
+
+<form action="/app/douserlogin/" method="post">
+
+    {% csrf_token %}
+    <span>用户名:</span><input type="text" name="username" placeholder="请输入用户名">
+    <br>
+    <img id="verify_code" src="/app/getverifycode/" alt="验证码" width="200px" height="100px">
+
+    <br>
+
+    <button>登录</button>
+
+</form>
+
+
+</body>
+</html>

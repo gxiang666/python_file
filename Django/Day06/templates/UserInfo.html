@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息</title>
+</head>
+<body>
+
+{% if user %}
+
+    <h2>欢迎回来{{ user.u_name }}</h2>
+
+{% else %}
+
+    <h2><a href="{% url 'app:user_login' %}">游客请先登录</a></h2>
+
+{% endif %}
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<ul>
+    {% for animal in animals %}
+         <li>{{ animal.a_name }}:{{ animal.get_age }}</li>
+    {% endfor %}
+
+</ul>
+
+<hr>
+
+<h2>{{ animals.1.a_name }}:{{ animals.1.get_age }}</h2>
+
+<hr>
+
+<h3>{{ data.msg }}</h3>
+
+
+<hr>
+
+{% for animal in animals %}
+    <li>{{ animal.a_name }}</li>
+    {% empty %}
+    <h3>动物都跑啦</h3>
+{% endfor %}
+
+
+
+
+
