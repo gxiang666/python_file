@@ -3,8 +3,8 @@
 服务器的启动					python manager.py runserver [ip:port]
 
 迁移的概念:就是将模型映射到数据库的过程
-	生成迁移:python manager.py makemigrations
-	执行迁移:python mananger.py migrate
+	生成迁移:python manage.py makemigrations
+	执行迁移:python manange.py migrate
 	1.pip install pymysql
 	2.安装后还需要在工程的__init__.py中添加初始化代码
 		import pymysql
