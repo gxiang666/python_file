@@ -25,13 +25,12 @@ class House:
 
         print("要添加 %s" % item)
 
-...
 
 # 2. 创建房子对象
 my_home = House("两室一厅", 60)
 
-my_home.add_item(bed)
-my_home.add_item(chest)
-my_home.add_item(table)
+my_home.add_item("bed")
+my_home.add_item("chest")
+my_home.add_item("table")
 
 print(my_home)

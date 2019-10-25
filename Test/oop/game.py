@@ -20,6 +20,7 @@ class Game(object):
         # 使用类名.修改历史最高分
         Game.top_score = 999
 
+
 # 1. 查看游戏帮助
 Game.show_help()
 

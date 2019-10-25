@@ -24,6 +24,7 @@ class Gun:
         
         print("%s 发射子弹[%d]..." % (self.model, self.bullet_count))
 
+
 # 创建枪对象
 ak47 = Gun("ak47")
 ak47.add_bullet(50)
